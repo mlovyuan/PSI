@@ -76,5 +76,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PSI.BLL\PSI.BLL.csproj">
+      <Project>{e3c1788a-20a2-437c-a928-cd8ba2a1c118}</Project>
+      <Name>PSI.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PSI.Common\PSI.Common.csproj">
+      <Project>{4565f6c9-0df6-4f3e-b875-6018e3986719}</Project>
+      <Name>PSI.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PSI.Models\PSI.Models.csproj">
+      <Project>{b697d621-40a9-44b7-99b8-ab673cdf05d3}</Project>
+      <Name>PSI.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

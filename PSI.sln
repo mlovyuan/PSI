@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSI.DbUtility", "PSI.DbUtil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSI.Models", "PSI.Models\PSI.Models.csproj", "{B697D621-40A9-44B7-99B8-AB673CDF05D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSI.Common", "PSI.Common\PSI.Common.csproj", "{4565F6C9-0DF6-4F3E-B875-6018E3986719}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B697D621-40A9-44B7-99B8-AB673CDF05D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B697D621-40A9-44B7-99B8-AB673CDF05D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B697D621-40A9-44B7-99B8-AB673CDF05D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4565F6C9-0DF6-4F3E-B875-6018E3986719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4565F6C9-0DF6-4F3E-B875-6018E3986719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4565F6C9-0DF6-4F3E-B875-6018E3986719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4565F6C9-0DF6-4F3E-B875-6018E3986719}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
