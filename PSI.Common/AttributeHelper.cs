@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +15,7 @@ namespace PSI.Common
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public static string GetTName(this Type type)
+        public static string GetTableName(this Type type)
         {
             string tableName = string.Empty;
             object[] attrs = type.GetCustomAttributes(false);
@@ -32,5 +33,45 @@ namespace PSI.Common
             }
             return tableName;
         }
+
+        /// <summary>
+        /// 取得映射的欄位名
+        /// </summary>
+        /// <param name="property"></param>
+        /// <returns></returns>
+        public static string GetColumnName(this PropertyInfo property)
+        {
+            string columnName = string.Empty;
+            object[] attrs = property.GetCustomAttributes(false);
+            foreach (var attr in attrs)
+            {
+                if (attr is ColumnAttribute)
+                {
+                    ColumnAttribute columnAttribute = attr as ColumnAttribute;
+                    columnName = columnAttribute.ColName;
+                }
+            }
+            if (string.IsNullOrEmpty(columnName))
+            {
+                columnName = property.Name;
+            }
+            return columnName;
+        }
+
+        /// <summary>
+        /// 判斷PK是否會自動增加
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static bool IsIncrement(this Type type)
+        {
+            object[] attributes = type.GetCustomAttributes(false);
+            foreach(var attribute in attributes)
+            {
+                PrimaryKeyAttribute primaryKeyAttribute = attribute as PrimaryKeyAttribute;
+                return primaryKeyAttribute.AutoIncrement;
+            }
+            return false;
+        } 
     }
 }

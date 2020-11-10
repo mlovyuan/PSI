@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PSI.Common.CustomAttributes
 {
     [AttributeUsage(AttributeTargets.Class)]
-    class PrimaryKeyAttribute:Attribute
+    public class PrimaryKeyAttribute:Attribute
     {
         public string Name { get; protected set; }
         public bool AutoIncrement = false;
